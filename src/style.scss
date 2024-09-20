@@ -1,0 +1,5 @@
+@use 'sass:color';
+$bgcolor: blanchedalmond;
+body {
+    background-color: color.adjust($bgcolor, $lightness: -10%);
+}
