@@ -7,7 +7,12 @@ setTimeout(() => {
 </script>
 
 <template>
-    <h1>{{ message }}</h1>
+    <div class="container">
+        <div class="content">
+            <h1>{{ message }}</h1>
+            <button class="button is-primary">Click me</button>
+        </div>
+    </div>
 </template>
 
 
