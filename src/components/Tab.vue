@@ -1,21 +1,19 @@
 <script setup>
-import { ref } from 'vue';
-defineProps(['titles']);
-const emit = defineEmits(['change']);
-let current = ref(0);
-function activeChange(key){
-    current.value = key;
-    emit('change', key);
-}
+import {useRouter} from 'vue-router';
+const router = useRouter();
+
+let routes = router.getRoutes().filter(route => {
+    return !route.meta.hasOwnProperty('showInTab') || route.meta.showInTab;  
+});
 </script>
 <template>
     <div class="tabs">
         <ul>
             <!-- <li class="is-active"><a>Pictures</a></li> -->
-           
-            <li v-for="(title,key) in titles" :class="{'is-active': key===current}">
-                <a @click="activeChange(key)">{{ title }}</a>
+            <li v-for="route in routes" :class="{'is-active': route.path === $route.path}">
+                <RouterLink :to="route.path">{{ route.name }}</RouterLink>
             </li>
+
         </ul>
     </div>
 </template>
