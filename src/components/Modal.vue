@@ -5,7 +5,7 @@ defineProps(['isOpen']);
     <div class="modal" :class="{ 'is-active': isOpen }">
         <div class="modal-background" @click="$emit('close')"></div>
         <div class="modal-content">
-            <slot></slot>
+        <slot></slot>
         </div>
         <button class="modal-close is-large" aria-label="close" @click="$emit('close')"></button>
     </div>
