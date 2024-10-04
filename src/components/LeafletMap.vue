@@ -20,7 +20,11 @@
         }).addTo(map);
         map.on('zoomend', function(ev) {
             emit('zoom', map.getZoom());
+        });
+        props.markers.forEach((marker) => {
+          L.marker([51.5, -0.09]).addTo(map);
         })
+
     })
    
   watch(zoom, (newZoom, oldZoom) => {

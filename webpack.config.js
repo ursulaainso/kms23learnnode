@@ -52,7 +52,14 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[file][ext]'
+                }
+              }
         ],
     },
     plugins: [
@@ -66,5 +73,6 @@ module.exports = {
             __VUE_PROD_DEVTOOLS__: false,
             __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
         }),
+        new domainToASCII.env
     ],
 };
