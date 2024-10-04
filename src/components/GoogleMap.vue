@@ -1,7 +1,7 @@
 <script setup>
 import {onMounted, useId, watch, torefs} from 'vue'
 const is = useId();
-console.log(process)
+console.log(process.env.GOOGLE_API_KEY);
 import { Loader } from "@googlemaps/js-api-loader"
 
 const loader = new Loader({
