@@ -9,6 +9,7 @@ import ChuckNorris from './pages/ChuckNorris.vue';
 import NotFound from './pages/NotFound.vue';
 import RickAndMorty from './pages/RickAndMorty.vue';
 import Maps from './pages/Maps.vue';
+import CanvasExmple from './pages/CanvasExmple.vue';
 
 const routes = [
     { path: '/', name: 'ToDo', component: ToDo },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/chuck', name: 'Chuck Norris', component: ChuckNorris },
     { path: '/rickandmorty', name: 'Rick And Morty', component: RickAndMorty},
     { path: '/maps', name: 'Maps', component: Maps},
+    { path: '/canvas', name: 'Canvas', component: CanvasExample},
 
     /** must be last laways */
     { path: '/:pathMatch(.*)*', name: 'Not Found', component: NotFound, meta: { showInTab: false }},
