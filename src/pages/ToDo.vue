@@ -36,7 +36,7 @@ let toDoItems = computed(() => {
                 <input v-model="message" @keydown.enter="addItem" class="input" type="text" placeholder="Item to add">
             </div>
             <div class="control">
-                <button class="button is-info" @click="addItem">
+                <button class="button is-warning" @click="addItem">
                     Add
                 </button>
             </div>
